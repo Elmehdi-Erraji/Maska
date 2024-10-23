@@ -10,6 +10,7 @@
     <label for="numeroAdhesion">Numéro d'adhésion:</label>
     <form:input path="numeroAdhesion" /><br/>
 
+    
     <label for="nom">Nom:</label>
     <form:input path="nom" /><br/>
 

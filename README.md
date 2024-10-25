@@ -61,15 +61,49 @@ this allows us the developers to focus more on the app logic rather than
 worrying about objects management.
 
 ### Spring Beans
+In spring , any object managed by the Spring IoC container
+is called a "bean". These beans are typically defined in
+configuration files(or using annotations) and are created 
+and wired by spring according to the app needs.
+In this project classes like "UserService" or "UserRepository" would
+be configured as beans so that they can be injected where we need them.
+
 
 ### Bean Scopes
+Bean scopes define the lifecycle and visibility of 
+a bean inside the Spring application. some common scopes include:
+ * Singleton: A single instance of the bean is created and shared across the entire app.
+ * Prototype: A new instance is created every time the bean is requested.
+ * Request: Creates a bean for a single HTTP request(useful for webapps).
+ * Session: A bean instance is create for each user session.
+
+Depending on the requirements of the User management system, you 
+might choose a different scope for your beans.
 
 ### ApplicationContext
+The ApplicationContext is the central interface to the Spring container,
+providing configuration, managing beans, and handling dependencies.
+
 
 ### Component Scanning and Stereotype Annotations
+Spring offers a feature called Component Scanning that 
+automatically detects and registers beans in the application 
+context based on annotations.
 
 ### Spring Data JPA
+Spring Data JPA is a module that simplifies data access in Spring 
+applications. It provides a set of interfaces and helper methods 
+to interact with the database, making CRUD operations (Create, Read, Update, Delete) easy to implement.
 
 ### Spring MVC
+Spring MVC (Model-View-Controller) is a web module within Spring 
+that allows us to handle HTTP requests and responses.
 
 ### Installation and Setup
+Setting up a Spring project without Spring Boot involves 
+configuring dependencies and creating necessary configuration
+files to define beans, specify dependency injection, and 
+configure the MVC framework. This setup requires manual 
+steps, such as adding the Spring libraries, setting up an 
+ApplicationContext, and configuring XML or Java-based 
+configurations for your beans.

@@ -47,63 +47,33 @@ Maska-master [spring-framework]
 └── README.md
 ```
 ### Dependency Injection (DI)
-Dependency Infection is a concept in Spring,where the 
-framework provides objects needed by the application rather than 
-creating them itself. this is helpful because it louses the coupling 
-between the app parts, allowing for easier testing and maintenance.
+L'injection de dépendances est un concept dans Spring, où le framework fournit les objets nécessaires à l'application plutôt que de les créer directement. Cela aide à réduire le couplage entre les parties de l'application, facilitant les tests et la maintenance.
 
 ### Inversion of Control (IoC)
-Inversion of Control (IoC) is a principle where the control 
-of creating and managing objects is transferred from the program
-to the spring framework. the IoC also takes care of objects
-creation , dependency management, and the life cycle of objects.
-this allows us the developers to focus more on the app logic rather than
-worrying about objects management.
+L'inversion de contrôle (IoC) est un principe où le contrôle de la création et de la gestion des objets est confié au framework Spring. L'IoC gère la création des objets, la gestion des dépendances, et le cycle de vie des objets, permettant aux développeurs de se concentrer sur la logique de l'application.
 
 ### Spring Beans
-In spring , any object managed by the Spring IoC container
-is called a "bean". These beans are typically defined in
-configuration files(or using annotations) and are created 
-and wired by spring according to the app needs.
-In this project classes like "UserService" or "UserRepository" would
-be configured as beans so that they can be injected where we need them.
-
+Dans Spring, tout objet géré par le conteneur IoC est appelé un "bean". Ces beans sont définis dans des fichiers de configuration (ou avec des annotations) et sont créés et connectés par Spring selon les besoins de l'application. Dans ce projet, des classes comme "UserService" ou "UserRepository" seront configurées comme beans pour être injectées là où on en a besoin.
 
 ### Bean Scopes
-Bean scopes define the lifecycle and visibility of 
-a bean inside the Spring application. some common scopes include:
- * Singleton: A single instance of the bean is created and shared across the entire app.
- * Prototype: A new instance is created every time the bean is requested.
- * Request: Creates a bean for a single HTTP request(useful for webapps).
- * Session: A bean instance is create for each user session.
-
-Depending on the requirements of the User management system, you 
-might choose a different scope for your beans.
+Les portées des beans définissent le cycle de vie et la visibilité d'un bean dans l'application Spring. Quelques portées courantes incluent :
+ * Singleton : Un seul bean est créé et partagé dans toute l'application.
+ * Prototype : Un nouvel objet est créé chaque fois que le bean est demandé.
+ * Request : Crée un bean pour chaque requête HTTP (utile pour les applications web).
+ * Session : Un bean est créé pour chaque session utilisateur.
 
 ### ApplicationContext
-The ApplicationContext is the central interface to the Spring container,
-providing configuration, managing beans, and handling dependencies.
-
+L'ApplicationContext est l'interface centrale du conteneur Spring. Elle fournit la configuration, gère les beans et les dépendances.
 
 ### Component Scanning and Stereotype Annotations
-Spring offers a feature called Component Scanning that 
-automatically detects and registers beans in the application 
-context based on annotations.
+Spring propose une fonctionnalité appelée "Scan de Composants" qui détecte et enregistre automatiquement les 
+beans dans le contexte de l'application en fonction des annotations.
 
 ### Spring Data JPA
-Spring Data JPA is a module that simplifies data access in Spring 
-applications. It provides a set of interfaces and helper methods 
-to interact with the database, making CRUD operations (Create, Read, Update, Delete) easy to implement.
+Spring Data JPA est un module qui simplifie l'accès aux données dans les applications Spring. Il fournit des interfaces et des méthodes pour interagir avec la base de données, facilitant les opérations CRUD (Create, Read, Update, Delete).
 
 ### Spring MVC
-Spring MVC (Model-View-Controller) is a web module within Spring 
-that allows us to handle HTTP requests and responses.
+Spring MVC (Model-View-Controller) est un module web dans Spring qui permet de gérer les requêtes et les réponses HTTP.
 
 ### Installation and Setup
-Setting up a Spring project without Spring Boot involves 
-configuring dependencies and creating necessary configuration
-files to define beans, specify dependency injection, and 
-configure the MVC framework. This setup requires manual 
-steps, such as adding the Spring libraries, setting up an 
-ApplicationContext, and configuring XML or Java-based 
-configurations for your beans.
+Pour configurer un projet Spring sans Spring Boot, il faut ajouter les dépendances et créer les fichiers de configuration pour définir les beans, gérer l'injection de dépendances, et configurer le framework MVC.
